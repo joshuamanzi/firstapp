@@ -1,0 +1,39 @@
+<html>
+<head><title>TO-DO APP </title>
+	<link rel="stylesheet" type="text/css" href="s.css">
+	</head>
+	<body>
+		<fieldset>                                                        
+			<h1><center><b>TO-DO APP</b></center></h1>
+			<p>what are you planning to do today?</p><br>
+		<input type="text" id="text" placeholder="write here...">
+		<button id="btn" onClick="add()">SAVE</button><br>
+		<h2><u><b>tasks of today:</b></u></h2>
+		<ul id="show">
+			<li>wake up</li>
+		</ul>
+	</fieldset>
+
+<script>
+const a=[];
+function display(){
+	let g="";
+	a.forEach(get);
+	function get(value){
+		g+="<li>"+value+"</li>";
+	}
+	document.getElementById("show").innerHTML=g;
+}
+function add(){
+let element=document.getElementById("text").value
+a.push(element);
+display()
+}
+display()
+</script>
+</body>
+</html>
+
+
+
+
